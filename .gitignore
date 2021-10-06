@@ -386,3 +386,15 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
+.nuke/temp/build-attempt.log
+src/CafeApp.Core/obj/CafeApp.Core.fsproj.nuget.dgspec.json
+src/CafeApp.Core/obj/CafeApp.Core.fsproj.nuget.g.props
+src/CafeApp.Core/obj/CafeApp.Core.fsproj.nuget.g.targets
+src/CafeApp.Core/obj/project.assets.json
+src/CafeApp.Core/obj/project.nuget.cache
+src/CafeApp.Core/obj/Debug/net5.0/CafeApp.Core.assets.cache
+src/CafeApp.Core/obj/Debug/net5.0/CafeApp.Core.fsproj.CoreCompileInputs.cache
+src/CafeApp.Core.Tests/obj/CafeApp.Core.Tests.fsproj.nuget.dgspec.json
+src/CafeApp.Core.Tests/obj/project.assets.json
+src/CafeApp.Core.Tests/obj/project.nuget.cache
+src/CafeApp.Core.Tests/obj/Debug/net5.0/CafeApp.Core.Tests.fsproj.CoreCompileInputs.cache

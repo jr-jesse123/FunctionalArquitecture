@@ -34,7 +34,6 @@
     <Pkgxunit_runner_console Condition=" '$(Pkgxunit_runner_console)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.runner.console\2.4.1</Pkgxunit_runner_console>
     <Pkgxunit_abstractions Condition=" '$(Pkgxunit_abstractions)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.abstractions\2.0.3</Pkgxunit_abstractions>
     <PkgMicrosoft_NETCore_Platforms Condition=" '$(PkgMicrosoft_NETCore_Platforms)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\microsoft.netcore.platforms\5.0.3</PkgMicrosoft_NETCore_Platforms>
-    <PkgNETStandard_Library Condition=" '$(PkgNETStandard_Library)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\netstandard.library\2.0.3</PkgNETStandard_Library>
     <Pkgxunit_extensibility_core Condition=" '$(Pkgxunit_extensibility_core)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.extensibility.core\2.4.1</Pkgxunit_extensibility_core>
     <Pkgxunit_extensibility_execution Condition=" '$(Pkgxunit_extensibility_execution)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.extensibility.execution\2.4.1</Pkgxunit_extensibility_execution>
     <Pkgxunit_core Condition=" '$(Pkgxunit_core)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.core\2.4.1</Pkgxunit_core>
