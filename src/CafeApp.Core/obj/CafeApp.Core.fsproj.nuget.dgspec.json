@@ -1,0 +1,185 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\aulas\\fsapplied_1\\CafeApp\\src\\CafeApp.Core\\CafeApp.Core.fsproj": {}
+  },
+  "projects": {
+    "D:\\aulas\\fsapplied_1\\CafeApp\\src\\CafeApp.Core\\CafeApp.Core.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\aulas\\fsapplied_1\\CafeApp\\src\\CafeApp.Core\\CafeApp.Core.fsproj",
+        "projectName": "CafeApp.Core",
+        "projectPath": "D:\\aulas\\fsapplied_1\\CafeApp\\src\\CafeApp.Core\\CafeApp.Core.fsproj",
+        "packagesPath": "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\",
+        "outputPath": "D:\\aulas\\fsapplied_1\\CafeApp\\src\\CafeApp.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\JESSE JUNIOR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1603",
+            "NU1604",
+            "NU1605",
+            "NU1608"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "target": "Package",
+              "version": "[6.0.0, )",
+              "generatePathProperty": true
+            },
+            "Fake.Core.Context": {
+              "target": "Package",
+              "version": "[5.20.4, )",
+              "generatePathProperty": true
+            },
+            "Fake.Core.Environment": {
+              "target": "Package",
+              "version": "[5.20.4, )",
+              "generatePathProperty": true
+            },
+            "Fake.Core.FakeVar": {
+              "target": "Package",
+              "version": "[5.20.4, )",
+              "generatePathProperty": true
+            },
+            "Fake.Core.Process": {
+              "target": "Package",
+              "version": "[5.20.4, )",
+              "generatePathProperty": true
+            },
+            "Fake.Core.String": {
+              "target": "Package",
+              "version": "[5.20.4, )",
+              "generatePathProperty": true
+            },
+            "Fake.Core.Trace": {
+              "target": "Package",
+              "version": "[5.20.4, )",
+              "generatePathProperty": true
+            },
+            "Fake.Dotnet.Testing.Xunit2": {
+              "target": "Package",
+              "version": "[5.20.4, )",
+              "generatePathProperty": true
+            },
+            "Fake.IO.FileSystem": {
+              "target": "Package",
+              "version": "[5.20.4, )",
+              "generatePathProperty": true
+            },
+            "Fake.Testing.Common": {
+              "target": "Package",
+              "version": "[5.20.4, )",
+              "generatePathProperty": true
+            },
+            "Microsoft.NETCore.Platforms": {
+              "target": "Package",
+              "version": "[5.0.3, )",
+              "generatePathProperty": true
+            },
+            "System.Collections.Immutable": {
+              "target": "Package",
+              "version": "[5.0.0, )",
+              "generatePathProperty": true
+            },
+            "System.Runtime.CompilerServices.Unsafe": {
+              "target": "Package",
+              "version": "[5.0.0, )",
+              "generatePathProperty": true
+            },
+            "Xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )",
+              "generatePathProperty": true
+            },
+            "xunit.abstractions": {
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "generatePathProperty": true
+            },
+            "xunit.analyzers": {
+              "target": "Package",
+              "version": "[0.10.0, )",
+              "generatePathProperty": true
+            },
+            "xunit.assert": {
+              "target": "Package",
+              "version": "[2.4.1, )",
+              "generatePathProperty": true
+            },
+            "xunit.core": {
+              "target": "Package",
+              "version": "[2.4.1, )",
+              "generatePathProperty": true
+            },
+            "xunit.extensibility.core": {
+              "target": "Package",
+              "version": "[2.4.1, )",
+              "generatePathProperty": true
+            },
+            "xunit.extensibility.execution": {
+              "target": "Package",
+              "version": "[2.4.1, )",
+              "generatePathProperty": true
+            },
+            "xunit.runner.console": {
+              "target": "Package",
+              "version": "[2.4.1, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.9, 5.0.9]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.1.21463.6\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

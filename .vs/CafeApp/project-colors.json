@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "c14c746c-a026-4eca-a2d4-4e73b454fda8": {
+      "ProjectGuid": "c14c746c-a026-4eca-a2d4-4e73b454fda8",
+      "DisplayName": "CofeApp.Core",
+      "ColorIndex": 0
+    },
+    "e561000d-668f-459c-bc8d-d9dc06ab2331": {
+      "ProjectGuid": "e561000d-668f-459c-bc8d-d9dc06ab2331",
+      "DisplayName": "CafeApp.Core",
+      "ColorIndex": 1
+    },
+    "67738a25-b0ec-4cff-9d2b-cd067454f0d1": {
+      "ProjectGuid": "67738a25-b0ec-4cff-9d2b-cd067454f0d1",
+      "DisplayName": "CafeApp.Core",
+      "ColorIndex": 2
+    },
+    "252dc324-d9ad-4e97-a58b-1a06fd9bd04a": {
+      "ProjectGuid": "252dc324-d9ad-4e97-a58b-1a06fd9bd04a",
+      "DisplayName": "CafeApp.Core.Tests",
+      "ColorIndex": 3
+    },
+    "365ce8a5-2357-4d19-a832-61d9e4833e6c": {
+      "ProjectGuid": "365ce8a5-2357-4d19-a832-61d9e4833e6c",
+      "DisplayName": "CafeApp.Core.Tests",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

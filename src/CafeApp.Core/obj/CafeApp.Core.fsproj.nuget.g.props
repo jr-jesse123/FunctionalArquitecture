@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages;C:\Program Files (x86)\Microsoft\Xamarin\NuGet\</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.0.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\JESSE JUNIOR\.nuget\packages\" />
+    <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
+    <SourceRoot Include="C:\Program Files (x86)\Microsoft\Xamarin\NuGet\" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <None Include="$(NuGetPackageRoot)fsharp.core\6.0.0\contentFiles\any\netstandard2.1\FSharp.Core.xml" Condition="Exists('$(NuGetPackageRoot)fsharp.core\6.0.0\contentFiles\any\netstandard2.1\FSharp.Core.xml')">
+      <NuGetPackageId>FSharp.Core</NuGetPackageId>
+      <NuGetPackageVersion>6.0.0</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>FSharp.Core.xml</TargetPath>
+      <Private>True</Private>
+      <Link>FSharp.Core.xml</Link>
+    </None>
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)xunit.runner.console\2.4.1\build\xunit.runner.console.props" Condition="Exists('$(NuGetPackageRoot)xunit.runner.console\2.4.1\build\xunit.runner.console.props')" />
+    <Import Project="$(NuGetPackageRoot)xunit.core\2.4.1\build\xunit.core.props" Condition="Exists('$(NuGetPackageRoot)xunit.core\2.4.1\build\xunit.core.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Pkgxunit_runner_console Condition=" '$(Pkgxunit_runner_console)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.runner.console\2.4.1</Pkgxunit_runner_console>
+    <Pkgxunit_abstractions Condition=" '$(Pkgxunit_abstractions)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.abstractions\2.0.3</Pkgxunit_abstractions>
+    <PkgMicrosoft_NETCore_Platforms Condition=" '$(PkgMicrosoft_NETCore_Platforms)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\microsoft.netcore.platforms\5.0.3</PkgMicrosoft_NETCore_Platforms>
+    <Pkgxunit_extensibility_core Condition=" '$(Pkgxunit_extensibility_core)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.extensibility.core\2.4.1</Pkgxunit_extensibility_core>
+    <Pkgxunit_extensibility_execution Condition=" '$(Pkgxunit_extensibility_execution)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.extensibility.execution\2.4.1</Pkgxunit_extensibility_execution>
+    <Pkgxunit_core Condition=" '$(Pkgxunit_core)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.core\2.4.1</Pkgxunit_core>
+    <Pkgxunit_assert Condition=" '$(Pkgxunit_assert)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.assert\2.4.1</Pkgxunit_assert>
+    <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.analyzers\0.10.0</Pkgxunit_analyzers>
+    <Pkgxunit Condition=" '$(Pkgxunit)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit\2.4.1</Pkgxunit>
+    <PkgSystem_Runtime_CompilerServices_Unsafe Condition=" '$(PkgSystem_Runtime_CompilerServices_Unsafe)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0</PkgSystem_Runtime_CompilerServices_Unsafe>
+    <PkgSystem_Collections_Immutable Condition=" '$(PkgSystem_Collections_Immutable)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\system.collections.immutable\5.0.0</PkgSystem_Collections_Immutable>
+    <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fsharp.core\6.0.0</PkgFSharp_Core>
+    <PkgFake_Core_Context Condition=" '$(PkgFake_Core_Context)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.core.context\5.20.4</PkgFake_Core_Context>
+    <PkgFake_Core_FakeVar Condition=" '$(PkgFake_Core_FakeVar)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.core.fakevar\5.20.4</PkgFake_Core_FakeVar>
+    <PkgFake_Core_Environment Condition=" '$(PkgFake_Core_Environment)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.core.environment\5.20.4</PkgFake_Core_Environment>
+    <PkgFake_Core_Trace Condition=" '$(PkgFake_Core_Trace)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.core.trace\5.20.4</PkgFake_Core_Trace>
+    <PkgFake_Testing_Common Condition=" '$(PkgFake_Testing_Common)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.testing.common\5.20.4</PkgFake_Testing_Common>
+    <PkgFake_Core_String Condition=" '$(PkgFake_Core_String)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.core.string\5.20.4</PkgFake_Core_String>
+    <PkgFake_IO_FileSystem Condition=" '$(PkgFake_IO_FileSystem)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.io.filesystem\5.20.4</PkgFake_IO_FileSystem>
+    <PkgFake_Core_Process Condition=" '$(PkgFake_Core_Process)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.core.process\5.20.4</PkgFake_Core_Process>
+    <PkgFake_DotNet_Testing_XUnit2 Condition=" '$(PkgFake_DotNet_Testing_XUnit2)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.dotnet.testing.xunit2\5.20.4</PkgFake_DotNet_Testing_XUnit2>
+  </PropertyGroup>
+</Project>

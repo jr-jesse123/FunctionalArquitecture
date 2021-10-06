@@ -1,0 +1,4 @@
+Xunit
+FSharp.Core
+Fake.Dotnet.Testing.Xunit2
+xunit.runner.console
