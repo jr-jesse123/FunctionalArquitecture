@@ -24,7 +24,7 @@ class Build : NukeBuild
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
 
-    public static int Main () => Execute<Build>(x => x.Compile);
+    public static int Main () => Execute<Build>(x => x.RunTests);
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
@@ -50,6 +50,7 @@ class Build : NukeBuild
 
     Target Compile => _ => _
         .DependsOn(Restore)
+        .Triggers(RunTests)
         .Executes(() =>
         {
             DotNetBuild(s => s
@@ -57,5 +58,18 @@ class Build : NukeBuild
                 .SetConfiguration(Configuration)
                 .EnableNoRestore());
         });
+
+    Target RunTests => _ => _
+        .DependsOn(Compile)
+    .Executes(() => 
+    {
+        SourceDirectory.GlobFiles("**/*.Tests.fsproj").ForEach(x => 
+        {
+            DotNetTest(s => s.SetProjectFile(x));
+            Logger.Info(x);
+            
+        });
+
+    });
 
 }

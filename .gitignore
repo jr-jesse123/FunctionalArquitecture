@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
+
+
+
 # User-specific files
 *.rsuser
 *.suo
@@ -398,3 +402,9 @@ src/CafeApp.Core.Tests/obj/CafeApp.Core.Tests.fsproj.nuget.dgspec.json
 src/CafeApp.Core.Tests/obj/project.assets.json
 src/CafeApp.Core.Tests/obj/project.nuget.cache
 src/CafeApp.Core.Tests/obj/Debug/net5.0/CafeApp.Core.Tests.fsproj.CoreCompileInputs.cache
+build/bin/Debug/_build.dll
+build/bin/Debug/_build.pdb
+build/bin/Debug/ref/_build.dll
+build/obj/Debug/_build.dll
+build/obj/Debug/_build.pdb
+build/obj/Debug/ref/_build.dll
