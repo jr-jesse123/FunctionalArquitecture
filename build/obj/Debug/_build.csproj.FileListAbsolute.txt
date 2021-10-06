@@ -47,7 +47,6 @@ D:\aulas\fsapplied_1\CafeApp\build\obj\Debug\_build.GeneratedMSBuildEditorConfig
 D:\aulas\fsapplied_1\CafeApp\build\obj\Debug\_build.AssemblyInfoInputs.cache
 D:\aulas\fsapplied_1\CafeApp\build\obj\Debug\_build.AssemblyInfo.cs
 D:\aulas\fsapplied_1\CafeApp\build\obj\Debug\_build.csproj.CoreCompileInputs.cache
-D:\aulas\fsapplied_1\CafeApp\build\obj\Debug\_build.csproj.CopyComplete
 D:\aulas\fsapplied_1\CafeApp\build\obj\Debug\_build.dll
 D:\aulas\fsapplied_1\CafeApp\build\obj\Debug\ref\_build.dll
 D:\aulas\fsapplied_1\CafeApp\build\obj\Debug\_build.pdb
