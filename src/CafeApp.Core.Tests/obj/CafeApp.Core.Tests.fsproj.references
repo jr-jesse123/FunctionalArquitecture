@@ -1,1 +1,11 @@
 FSharp.Core,6.0,Direct,Main,false,true,false,true
+Microsoft.NETCore.Platforms,5.0.3,Transitive,Main,false,true,false,true
+NHamcrest,2.0.1,Transitive,Main,false,true,false,true
+xunit.abstractions,2.0.3,Transitive,Main,false,true,false,true
+xunit.analyzers,0.10,Transitive,Main,false,true,false,true
+xunit.assert,2.4.1,Transitive,Main,false,true,false,true
+xunit.extensibility.core,2.4.1,Transitive,Main,false,true,false,true
+xunit.extensibility.execution,2.4.1,Transitive,Main,false,true,false,true
+xunit.core,2.4.1,Transitive,Main,false,true,false,true
+xunit,2.4.1,Transitive,Main,false,true,false,true
+FsUnit.xUnit,4.0.6,Direct,Main,false,true,false,true

@@ -46,9 +46,65 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "FSharp.Core": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "FsUnit": {
+              "target": "Package",
+              "version": "[4.0.6, )"
+            },
+            "FsUnit.xUnit": {
+              "target": "Package",
+              "version": "[4.0.6, )"
+            },
+            "Microsoft.NETCore.Platforms": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "NHamcrest": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
             "Nuke.Common": {
               "target": "Package",
               "version": "[5.3.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.abstractions": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "xunit.analyzers": {
+              "target": "Package",
+              "version": "[0.10.0, )"
+            },
+            "xunit.assert": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.core": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.extensibility.core": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.extensibility.execution": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           },
           "imports": [

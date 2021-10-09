@@ -14,7 +14,26 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft\Xamarin\NuGet\" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <None Include="$(NuGetPackageRoot)fsharp.core\6.0.0\contentFiles\any\netstandard2.1\FSharp.Core.xml" Condition="Exists('$(NuGetPackageRoot)fsharp.core\6.0.0\contentFiles\any\netstandard2.1\FSharp.Core.xml')">
+      <NuGetPackageId>FSharp.Core</NuGetPackageId>
+      <NuGetPackageVersion>6.0.0</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>FSharp.Core.xml</TargetPath>
+      <Private>True</Private>
+      <Link>FSharp.Core.xml</Link>
+    </None>
+  </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)xunit.core\2.4.1\build\xunit.core.props" Condition="Exists('$(NuGetPackageRoot)xunit.core\2.4.1\build\xunit.core.props')" />
+    <Import Project="$(NuGetPackageRoot)nunit\3.13.2\build\NUnit.props" Condition="Exists('$(NuGetPackageRoot)nunit\3.13.2\build\NUnit.props')" />
     <Import Project="$(NuGetPackageRoot)nuke.common\5.3.0\build\Nuke.Common.props" Condition="Exists('$(NuGetPackageRoot)nuke.common\5.3.0\build\Nuke.Common.props')" />
   </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.analyzers\0.10.0</Pkgxunit_analyzers>
+    <PkgFsUnit_xUnit Condition=" '$(PkgFsUnit_xUnit)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fsunit.xunit\4.0.6</PkgFsUnit_xUnit>
+    <PkgFsUnit Condition=" '$(PkgFsUnit)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fsunit\4.0.6</PkgFsUnit>
+  </PropertyGroup>
 </Project>

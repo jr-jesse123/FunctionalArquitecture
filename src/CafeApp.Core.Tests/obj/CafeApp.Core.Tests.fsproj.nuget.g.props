@@ -35,11 +35,21 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Pkgxunit_runner_visualstudio Condition=" '$(Pkgxunit_runner_visualstudio)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.runner.visualstudio\2.4.3</Pkgxunit_runner_visualstudio>
+    <Pkgxunit_runner_console Condition=" '$(Pkgxunit_runner_console)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.runner.console\2.4.1</Pkgxunit_runner_console>
+    <Pkgxunit_abstractions Condition=" '$(Pkgxunit_abstractions)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.abstractions\2.0.3</Pkgxunit_abstractions>
+    <PkgMicrosoft_NETCore_Platforms Condition=" '$(PkgMicrosoft_NETCore_Platforms)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\microsoft.netcore.platforms\5.0.3</PkgMicrosoft_NETCore_Platforms>
+    <PkgNETStandard_Library Condition=" '$(PkgNETStandard_Library)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\netstandard.library\2.0.3</PkgNETStandard_Library>
+    <Pkgxunit_extensibility_core Condition=" '$(Pkgxunit_extensibility_core)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.extensibility.core\2.4.1</Pkgxunit_extensibility_core>
+    <Pkgxunit_extensibility_execution Condition=" '$(Pkgxunit_extensibility_execution)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.extensibility.execution\2.4.1</Pkgxunit_extensibility_execution>
+    <Pkgxunit_core Condition=" '$(Pkgxunit_core)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.core\2.4.1</Pkgxunit_core>
+    <Pkgxunit_assert Condition=" '$(Pkgxunit_assert)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.assert\2.4.1</Pkgxunit_assert>
     <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit.analyzers\0.10.0</Pkgxunit_analyzers>
     <Pkgxunit Condition=" '$(Pkgxunit)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit\2.4.1</Pkgxunit>
+    <PkgNHamcrest Condition=" '$(PkgNHamcrest)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\nhamcrest\2.0.1</PkgNHamcrest>
     <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
     <PkgMicrosoft_NET_Test_Sdk Condition=" '$(PkgMicrosoft_NET_Test_Sdk)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\microsoft.net.test.sdk\16.9.4</PkgMicrosoft_NET_Test_Sdk>
     <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fsharp.core\6.0.0</PkgFSharp_Core>
+    <PkgFsUnit_xUnit Condition=" '$(PkgFsUnit_xUnit)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fsunit.xunit\4.0.6</PkgFsUnit_xUnit>
     <Pkgcoverlet_collector Condition=" '$(Pkgcoverlet_collector)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\coverlet.collector\3.0.2</Pkgcoverlet_collector>
   </PropertyGroup>
 </Project>
