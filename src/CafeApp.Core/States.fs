@@ -24,8 +24,19 @@ let apply state event =
          preparedFoodList= [food]) 
          |> OrderInProgress
 
-   | OrderInProgress ipo, OrderServed (order, _) -> ServedOrder order
+   | OrderInProgress ipo, DrinkServed (drink, _) -> 
+      {ipo with ServedDrinks = drink :: ipo.ServedDrinks  }
+      |> OrderInProgress
+
    
+
+   | OrderInProgress ipo, FoodServed (food, _) ->
+      {ipo with ServedFoods = food :: ipo.ServedFoods}
+      |> OrderInProgress
+
+   | OrderInProgress ipo, OrderServed (order, _) -> 
+      ServedOrder order
+
    | _ -> 
       sprintf "Não existe um próximo estado para %A quando ocorre o evento %A" state event
       |> failwith 

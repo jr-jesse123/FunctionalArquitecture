@@ -12,8 +12,6 @@ let (|ServeDrinCompletesOrder|_|) order drink =
       Some drink
    else
       None
-   
-
 let (|NonOrderedDrink|_|) order drink = 
    match List.contains drink order.Drinks with
    |false -> Some Drink
@@ -23,6 +21,17 @@ let (|NonOrderedFood|_|) order food =
    match List.contains food order.Foods with
    |false -> Some food
    |true -> None
+
+
+let (|AlreadyServedDrink|_|) ipo drink =
+   match List.contains drink ipo.ServedDrinks with
+   | true -> Some drink
+   | false -> None
+
+let (|AlreadyPreparedFood|_|) ipo food =
+   match List.contains food ipo.PreparedFoods with
+   | true -> Some food
+   | false -> None
 
 let handleOpenTab tab = function
 | ClosedTab _ -> [TabOpened tab] |> Ok
@@ -40,14 +49,15 @@ let HandlePlaceOrder order = function
 
 let handleServeDrink drink tabid state= 
    match state with
-   | PlacedOrder Order ->
+   | PlacedOrder order ->
       let event = DrinkServed (drink,tabid)
       match drink with
-         |NonOrderedDrink Order _ ->
+         |NonOrderedDrink order _ ->
             CanNotServeNonOrderedDrink drink |> Error
-         |ServeDrinCompletesOrder Order _ ->
-            let payment = {Tab= Order.Tab; Amount = orderAmount Order}
-            event :: [OrderServed (Order,payment)] |> Ok
+
+         |ServeDrinCompletesOrder order _ ->
+            let payment = {Tab= order.Tab; Amount = orderAmount order}
+            event :: [OrderServed (order,payment)] |> Ok
 
          | _ -> [event] |> Ok
 
@@ -55,8 +65,19 @@ let handleServeDrink drink tabid state=
    | ServedOrder _ -> OrderAlreadyServed |> Error
    | OpenedTab _ -> CanNotServeForNonPlacedOrder |> Error
    | ClosedTab _ -> CanNotServeWithClosedTab |> Error
+   | OrderInProgress ipo -> 
+      let drinkdServed = DrinkServed (drink, ipo.PlacedOrder.Tab.Id)
+      let order = ipo.PlacedOrder
+      match drink with
+      |AlreadyServedDrink ipo drink -> 
+         CanNotServeAlreadyServedDrink drink |> Error
+      |NonOrderedDrink order _ ->
+         CanNotServeNonOrderedDrink drink |> Error
+      | _ -> [drinkdServed] |> Ok
    
-   | _ -> failwith "TODO"
+   | _ -> 
+      sprintf "HandleDrink não implementado para o estado %A" state
+      |> failwith 
 
 
 let handlePrepareFood food tabId state =
@@ -69,10 +90,45 @@ let handlePrepareFood food tabId state =
    //| OpenedTab _ -> CanNotPrepareForNonPlacedOrder |> Error
    | ClosedTab _ -> CanNotPrepareWithClosedTab |> Error
    | ServedOrder _ -> OrderAlreadyServed |> Error
+   | OrderInProgress ipo ->
+      let order = ipo.PlacedOrder
+      match food with
+      | NonOrderedFood order _ ->
+         CanNotPrepareNonOrderedFood food |> Error
+      | AlreadyPreparedFood ipo _ ->
+         CanNotPrepareAlreadyPreparedFood food |> Error
+      | _ -> [FoodPrepared (food, tabId)] |> Ok
    | outroEstado -> 
       sprintf "Comando preparar Comida não implementado para o stado %A" state
       |> failwith 
    
+
+let (|NonPreparedFood|_|) ipo food = 
+   match List.contains food ipo.PreparedFoods with
+   | true -> None
+   | false -> Some food
+
+let (|AlreadyServedFood|_|) ipo food =
+   match List.contains food ipo.ServedFoods with
+   | true -> Some food
+   | false -> None
+
+let handleServeFood food tabId state =
+   match state with
+   | OrderInProgress iop ->
+      let event =  FoodServed (food , tabId)
+      match food with
+      | NonOrderedFood iop.PlacedOrder food ->
+         CanNotServeNonOrderedFood food |> Error
+      | NonPreparedFood iop food -> 
+         CanNotServeNonPreparedFood food |> Error
+      | AlreadyServedFood iop food ->
+         CanNotServeAlreadyServedFood food |> Error
+      | _ -> [event] |> Ok
+   | _ ->
+      sprintf "handleServeFood não implementado para o stado %A" state
+           |> failwith 
+        
 
 //TODO: APÓS FINALIZADO O LIVRO, VERIFICAR A POSSIBILIDADE DE RETIRAR O A CCHESSIE LIB
 ///Executa o comando solicitado e responde com os eventos consequentes
@@ -82,7 +138,10 @@ let execute state command =
    | PlaceOrder order -> HandlePlaceOrder order state
    | ServeDrink (drink, tabId) -> handleServeDrink  drink tabId state
    | PrepareFood (food, tabId) -> handlePrepareFood food tabId state
-   | _ -> failwith <| sprintf "O Comando %A não foii implementado para o estado %A" command state
+   | ServeFood (food, tabId) -> handleServeFood food tabId state
+   | _ -> 
+      sprintf "O Comando %A não foii implementado para o estado %A" command state
+      |> failwith 
 
 
 

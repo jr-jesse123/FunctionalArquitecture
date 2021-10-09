@@ -40,3 +40,29 @@ let ``Can not prepare with closed tab`` () =
    Given (ClosedTab None)
    |> When (PrepareFood (salad, order.Tab.Id))
    |> ShouldFailWith CanNotPrepareWithClosedTab
+
+[<Fact>]
+let ``Can not prepare non-ordered food during order in progress`` () =
+   let order = { order with Foods = [salad]}
+   let orderInProgress = {
+      PlacedOrder = order
+      ServedFoods = []
+      ServedDrinks = []
+      PreparedFoods = []
+   }
+   Given (OrderInProgress orderInProgress)
+   |> When (PrepareFood (pizza, order.Tab.Id))
+   |> ShouldFailWith (CanNotPrepareNonOrderedFood pizza)
+
+[<Fact>]
+let ``Can not prepare already prepared food during order in progress`` () =
+   let order = { order with Foods = [salad]}
+   let orderInProgress = {
+      PlacedOrder = order
+      ServedFoods = []
+      ServedDrinks = []
+      PreparedFoods = [salad]
+   }
+   Given (OrderInProgress orderInProgress)
+   |> When (PrepareFood (salad, order.Tab.Id))
+   |> ShouldFailWith (CanNotPrepareAlreadyPreparedFood salad)

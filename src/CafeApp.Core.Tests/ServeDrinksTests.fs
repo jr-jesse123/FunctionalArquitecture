@@ -12,6 +12,7 @@ open Xunit
 open Xunit
 open Xunit
 open TestData
+open Xunit
 
 [<Fact>]
 let ``Can Serve Drind`` () =
@@ -63,3 +64,47 @@ let ``Can serve drink for order containin only one drink`` () =
       DrinkServed (coke, order.Tab.Id)
       OrderServed (order, payment)
    ]
+
+[<Fact>]
+let ``Remain in order in progress while serving drink`` () =
+   let order = {order with Drinks = [coke;lemonade;appleJuice]}
+   let orderInProgress = {
+   PlacedOrder = order
+   ServedDrinks = [coke]
+   PreparedFoods = []
+   ServedFoods = []
+   }
+   let expected = {orderInProgress with ServedDrinks = lemonade :: orderInProgress.ServedDrinks}
+
+   Given (OrderInProgress orderInProgress)
+   |> When (ServeDrink (lemonade, order.Tab.Id))
+   |> ThenStateShouldBe (OrderInProgress expected)
+   |> WithEvents [DrinkServed (lemonade, order.Tab.Id)]
+
+
+[<Fact>]
+let ``Can not serve non ordered drinks during order in progress `` () =
+   let order = {order with Drinks = [coke;lemonade]}
+   let orderInProgress = {
+      PlacedOrder = order
+      ServedDrinks = [coke]
+      PreparedFoods = []
+      ServedFoods = []
+   }
+   Given (OrderInProgress orderInProgress)
+   |> When (ServeDrink (appleJuice,order.Tab.Id))
+   |> ShouldFailWith (CanNotServeNonOrderedDrink appleJuice)
+
+
+[<Fact>]
+let ``Can not serve an already served drinks`` () =
+   let order = {order with Drinks = [coke;lemonade]}
+   let orderInProgress = {
+      PlacedOrder = order
+      ServedDrinks = [coke]
+      PreparedFoods = []
+      ServedFoods = []
+   }
+   Given (OrderInProgress orderInProgress)
+   |> When (ServeDrink (coke,order.Tab.Id))
+   |> ShouldFailWith (CanNotServeAlreadyServedDrink coke)

@@ -7,25 +7,13 @@
       <ShowPassingTestsMenuOption>true</ShowPassingTestsMenuOption>
       <ShowFailingTestsMenuOption>true</ShowFailingTestsMenuOption>
       <ShowUnexecutedTestsMenuOption>true</ShowUnexecutedTestsMenuOption>
-      <ShowIgnoredTestsMenuOption>false</ShowIgnoredTestsMenuOption>
+      <ShowIgnoredTestsMenuOption>true</ShowIgnoredTestsMenuOption>
     </TestsWindowMenuOptions>
-    <TestsWindowSplitterDistance>44.4543838500977%</TestsWindowSplitterDistance>
+    <TestsWindowSplitterDistance>39.5348854064941%</TestsWindowSplitterDistance>
     <TestsWindowTreeLayout>
       <Column>
         <Name>Name</Name>
         <Width>600</Width>
-      </Column>
-      <Column>
-        <Name>Status</Name>
-        <Width>150</Width>
-      </Column>
-      <Column>
-        <Name>LastExecutionTime</Name>
-        <Width>180</Width>
-      </Column>
-      <Column>
-        <Name>GridNode</Name>
-        <Width>160</Width>
       </Column>
     </TestsWindowTreeLayout>
     <TestsWindowTreeSortOrder>
