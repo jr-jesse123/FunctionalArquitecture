@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\.config",
-    "\\.paket",
-    "\\paket-files",
-    "\\src",
-    "\\src\\CafeApp.Core.Tests",
-    "\\src\\CafeApp.Core.Tests\\bin",
-    "\\src\\CafeApp.Core.Tests\\bin\\Debug",
-    "\\src\\CafeApp.Core.Tests\\bin\\Debug\\net5.0",
-    "\\src\\CafeApp.Core.Tests\\bin\\Release"
+    ""
   ],
-  "SelectedNode": "\\build.fsx",
+  "SelectedNode": "\\CafeApp.sln",
   "PreviewInSolutionExplorer": false
 }
