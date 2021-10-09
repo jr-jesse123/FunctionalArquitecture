@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1oTga9l2OX4vwtwtjdwNQODixOcuODhgQA9+LTADumpk/Y6U4iXGQ52urciXH2adChoXMZ6j1ElENNz6qOzoWw==",
+  "dgSpecHash": "3xBi9ZMsdLImH5q+yTZlY+fTuQ8IudQtScXxPsMm4akkz8llVPjDs4250g586sqv+juMXSeo18Am6MW1JaYB7w==",
   "success": true,
   "projectFilePath": "D:\\aulas\\fsapplied_1\\CafeApp\\src\\CafeApp.Core.Tests\\CafeApp.Core.Tests.fsproj",
   "expectedPackageFiles": [
+    "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\chessie\\0.6.0\\chessie.0.6.0.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fake.core.context\\5.20.4\\fake.core.context.5.20.4.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fake.core.environment\\5.20.4\\fake.core.environment.5.20.4.nupkg.sha512",

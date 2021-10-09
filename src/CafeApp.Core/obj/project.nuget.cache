@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "x/cDTH8r1czN4bitCJ1XulWOCNQzil4QB4WEp1Cb26jhH8jfJPkvP3fXADgbXRGmwY1Kjd64EJwfi0Inchq/iA==",
+  "dgSpecHash": "/qRWm6if7pYcL2Kj36qCqS9vrSaKo4NypBM4WWuJ3fHzaKSkmTbeoA49bb/9SHIONO1XapqgJByIgjSu/TN5bw==",
   "success": true,
   "projectFilePath": "D:\\aulas\\fsapplied_1\\CafeApp\\src\\CafeApp.Core\\CafeApp.Core.fsproj",
   "expectedPackageFiles": [
+    "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\chessie\\0.6.0\\chessie.0.6.0.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fake.core.context\\5.20.4\\fake.core.context.5.20.4.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fake.core.environment\\5.20.4\\fake.core.environment.5.20.4.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fake.core.fakevar\\5.20.4\\fake.core.fakevar.5.20.4.nupkg.sha512",

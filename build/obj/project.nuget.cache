@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/N5GN4+K9g0v2eKeYtjDvdiYBXxn/IX0npjjRoDH4OMC06hWupvPAF34C8RUlbFx614/FGMDOYJEJb56x2H8Uw==",
+  "dgSpecHash": "6uwkuVP+L8IQSe/PwIq7mJH9nm7q0XmQxKL5RoaPchl88N5BQ+N8r1K0F+TnUl7qwshN/eP4kNW+ccWhSNrQmg==",
   "success": true,
   "projectFilePath": "D:\\aulas\\fsapplied_1\\CafeApp\\build\\_build.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\chessie\\0.6.0\\chessie.0.6.0.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fsharp.core\\6.0.0\\fsharp.core.6.0.0.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fsunit\\4.0.6\\fsunit.4.0.6.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fsunit.xunit\\4.0.6\\fsunit.xunit.4.0.6.nupkg.sha512",
