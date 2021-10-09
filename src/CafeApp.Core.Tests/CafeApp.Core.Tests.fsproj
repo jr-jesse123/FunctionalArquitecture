@@ -7,6 +7,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CafeAppTestsDSL.fs" />
+    <Compile Include="PlacedOrderTests.fs" />
     <Compile Include="OpenTabTests.fs" />
     <Compile Include="Tests.fs" />
     <Compile Include="Program.fs" />

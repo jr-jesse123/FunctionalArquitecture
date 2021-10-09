@@ -3,7 +3,7 @@ open FsUnit
 open Xunit
 open CommandHandlers
 open States
-open Chessie.ErrorHandling
+//open Chessie.ErrorHandling
 open Errors
 // CafeAppTestsDSL.fs
 let Given (state : State) = state
@@ -11,11 +11,11 @@ let When command state = (command, state)
 
 let ThenStateShouldBe expectedState (command, state) =
    match evolve state command with
-   |Ok((actualState, events),_) -> 
+   |Ok(actualState, events) -> 
       actualState |> should equal expectedState
       events |> Some
-   |Bad errs ->
-      sprintf "Expected : %A, But Actual : %A" expectedState errs.Head
+   |Error errs ->
+      sprintf "Expected : %A, But Actual : %A" expectedState errs
       |> failwith
       None
 
@@ -27,7 +27,7 @@ let WithEvents expectedEvents actualEvents =
 
 let ShouldFailWith (expectedError:Error) (command,state)  =
    match evolve state command with
-   | Bad errs -> errs.Head |> should equal expectedError
+   | Error errs -> errs |> should equal expectedError
    | Ok (r,_) -> 
       sprintf "Expected : %A, But Actual : %A" expectedError r
       |> failwith

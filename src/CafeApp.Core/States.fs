@@ -15,6 +15,7 @@ type State =
 let apply state event =
    match state,event with
    | ClosedTab _ ,  TabOpened tab -> OpenedTab tab
+   | OpenedTab _, OrderPlaced order -> PlacedOrder order
    | _ -> state
 
    //| _ -> ClosedTab None
