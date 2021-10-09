@@ -53,6 +53,5 @@
     <PkgFake_IO_FileSystem Condition=" '$(PkgFake_IO_FileSystem)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.io.filesystem\5.20.4</PkgFake_IO_FileSystem>
     <PkgFake_Core_Process Condition=" '$(PkgFake_Core_Process)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.core.process\5.20.4</PkgFake_Core_Process>
     <PkgFake_DotNet_Testing_XUnit2 Condition=" '$(PkgFake_DotNet_Testing_XUnit2)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.dotnet.testing.xunit2\5.20.4</PkgFake_DotNet_Testing_XUnit2>
-    <PkgChessie Condition=" '$(PkgChessie)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\chessie\0.6.0</PkgChessie>
   </PropertyGroup>
 </Project>

@@ -2,19 +2,6 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "Chessie/0.6.0": {
-        "type": "package",
-        "dependencies": {
-          "FSharp.Core": "4.0.1.7-alpha",
-          "NETStandard.Library": "1.6.0"
-        },
-        "compile": {
-          "lib/netstandard1.6/Chessie.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Chessie.dll": {}
-        }
-      },
       "Fake.Core.Context/5.20.4": {
         "type": "package",
         "dependencies": {
@@ -321,23 +308,6 @@
     }
   },
   "libraries": {
-    "Chessie/0.6.0": {
-      "sha512": "EzfvxiU+b9WmW2C1Q4Ns2AX2IAq6I6n8P+Lv4gzKmeDoj8FD+goHLMqwoaE08E91nQwlEzxd9iwkdwf5E5YGCQ==",
-      "type": "package",
-      "path": "chessie/0.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "chessie.0.6.0.nupkg.sha512",
-        "chessie.nuspec",
-        "lib/net40/Chessie.dll",
-        "lib/net40/Chessie.pdb",
-        "lib/net40/Chessie.xml.zip",
-        "lib/netstandard1.6/Chessie.dll",
-        "lib/netstandard1.6/Chessie.xml.zip",
-        "paket-installmodel.cache"
-      ]
-    },
     "Fake.Core.Context/5.20.4": {
       "sha512": "aD5FyaRRkkprjT3F19XNYu7365ZICRBay4SulJ/icolT4Qiy5uynptudgdb2aEdTN3xQw3POHE9cA8kQzHpujg==",
       "type": "package",
@@ -947,7 +917,6 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Chessie >= 0.6.0",
       "FSharp.Core >= 6.0.0",
       "Fake.Core.Context >= 5.20.4",
       "Fake.Core.Environment >= 5.20.4",
@@ -1015,11 +984,6 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-          "Chessie": {
-            "target": "Package",
-            "version": "[0.6.0, )",
-            "generatePathProperty": true
-          },
           "FSharp.Core": {
             "target": "Package",
             "version": "[6.0.0, )",

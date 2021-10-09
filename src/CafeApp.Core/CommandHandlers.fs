@@ -7,14 +7,24 @@ open Commands
 open Errors
 //open Chessie.ErrorHandling
 
+//open Chessie.ErrorHandling
+
 
 let handleOpenTab tab = function
 | ClosedTab _ -> [TabOpened tab] |> Ok
 | _ -> TabAlreadyOpened |> Error
 
 let HandlePlaceOrder order = function
-|OpenedTab _ -> [OrderPlaced order] |> Ok
-| _ -> failwith "não implementado"
+|OpenedTab _ -> 
+   match order with
+   | {Foods=[]; Drinks=[];} -> Error CanNotPlaceEmptyOrder 
+   | _ -> [OrderPlaced order] |> Ok
+
+| ClosedTab _ -> Error CanNotOrderWithClosedTab
+| _ -> Error OrderAlreadyPlaced
+
+
+//| _ -> failwith "não implementado"
 
 //TODO: APÓS FINALIZADO O LIVRO, VERIFICAR A POSSIBILIDADE DE RETIRAR O A CCHESSIE LIB
 let execute state command =
