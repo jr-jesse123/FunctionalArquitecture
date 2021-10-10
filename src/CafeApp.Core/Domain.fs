@@ -44,6 +44,7 @@ with
          ServedFoods = servedFoodList; 
          PreparedFoods = preparedFoodList
       }
+   
 
 
 let isServinDrinkCompletesOrder order drink =
@@ -57,3 +58,16 @@ let orderAmount order =
       order.Drinks |> List.map (fun (Drink d) -> d.Price) |> List.sum
 
    foodAmoun + drinksAmount
+
+
+let private nonServedFoods ipo =  
+   List.except ipo.ServedFoods ipo.PlacedOrder.Foods
+
+let private nonServedDrinks ipo =
+   List.except ipo.ServedDrinks ipo.PlacedOrder.Drinks
+
+let isServinDrinkCompletesIPOorder ipo drink =
+   List.isEmpty (nonServedFoods ipo) && nonServedDrinks ipo = [drink]
+   
+let isServinFoodCompletesIPOorder ipo food = 
+   List.isEmpty (nonServedDrinks ipo) && nonServedFoods ipo = [food]

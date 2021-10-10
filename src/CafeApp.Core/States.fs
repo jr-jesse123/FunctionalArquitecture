@@ -37,6 +37,9 @@ let apply state event =
    | OrderInProgress ipo, OrderServed (order, _) -> 
       ServedOrder order
 
+   | ServedOrder order, TabClosed payment ->
+      ClosedTab (Some order.Tab.Id)
+
    | _ -> 
       sprintf "Não existe um próximo estado para %A quando ocorre o evento %A" state event
       |> failwith 

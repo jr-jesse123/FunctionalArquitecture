@@ -6,6 +6,28 @@ open Domain
 open Commands
 open Errors
 
+let (|ServeDrinkCompletesIPOorder|_|) ipo drink = 
+   match isServinDrinkCompletesIPOorder ipo drink with
+   |true -> Some drink
+   |false -> None
+
+
+let (|ServeFoodCompletesIPOorder|_|) ipo food = 
+   match isServinFoodCompletesIPOorder ipo food with
+   |true -> Some food
+   |false -> None
+
+
+let (|NonPreparedFood|_|) ipo food = 
+  match List.contains food ipo.PreparedFoods with
+  | true -> None
+  | false -> Some food
+
+let (|AlreadyServedFood|_|) ipo food =
+  match List.contains food ipo.ServedFoods with
+  | true -> Some food
+  | false -> None
+
 
 let (|ServeDrinCompletesOrder|_|) order drink = 
    if isServinDrinkCompletesOrder order drink then
@@ -46,6 +68,8 @@ let HandlePlaceOrder order = function
 | ClosedTab _ -> Error CanNotOrderWithClosedTab
 | _ -> Error OrderAlreadyPlaced
 
+let payment (order :Order) = 
+   {Tab = order.Tab; Amount = orderAmount order}
 
 let handleServeDrink drink tabid state= 
    match state with
@@ -58,7 +82,6 @@ let handleServeDrink drink tabid state=
          |ServeDrinCompletesOrder order _ ->
             let payment = {Tab= order.Tab; Amount = orderAmount order}
             event :: [OrderServed (order,payment)] |> Ok
-
          | _ -> [event] |> Ok
 
       //[DrinkServed (drink, tabid)] |> Ok
@@ -73,11 +96,18 @@ let handleServeDrink drink tabid state=
          CanNotServeAlreadyServedDrink drink |> Error
       |NonOrderedDrink order _ ->
          CanNotServeNonOrderedDrink drink |> Error
+
+      | ServeDrinkCompletesIPOorder ipo drink ->
+            //orderAmount order
+         [drinkdServed; OrderServed (ipo.PlacedOrder, payment order )]|> Ok
+
+      //| ServeFoodCompletesIPOorder
       | _ -> [drinkdServed] |> Ok
    
    | _ -> 
       sprintf "HandleDrink não implementado para o estado %A" state
       |> failwith 
+
 
 
 let handlePrepareFood food tabId state =
@@ -101,22 +131,11 @@ let handlePrepareFood food tabId state =
    | outroEstado -> 
       sprintf "Comando preparar Comida não implementado para o stado %A" state
       |> failwith 
-   
-
-let (|NonPreparedFood|_|) ipo food = 
-   match List.contains food ipo.PreparedFoods with
-   | true -> None
-   | false -> Some food
-
-let (|AlreadyServedFood|_|) ipo food =
-   match List.contains food ipo.ServedFoods with
-   | true -> Some food
-   | false -> None
-
+  
 let handleServeFood food tabId state =
    match state with
    | OrderInProgress iop ->
-      let event =  FoodServed (food , tabId)
+      let events =  [FoodServed (food , tabId)]
       match food with
       | NonOrderedFood iop.PlacedOrder food ->
          CanNotServeNonOrderedFood food |> Error
@@ -124,11 +143,28 @@ let handleServeFood food tabId state =
          CanNotServeNonPreparedFood food |> Error
       | AlreadyServedFood iop food ->
          CanNotServeAlreadyServedFood food |> Error
-      | _ -> [event] |> Ok
+      | ServeFoodCompletesIPOorder iop food ->
+         (OrderServed (iop.PlacedOrder, payment iop.PlacedOrder)) ::  events 
+         |> Ok
+
+      | _ -> events |> Ok
    | _ ->
       sprintf "handleServeFood não implementado para o stado %A" state
            |> failwith 
-        
+
+let handleCloseTab payment' state =
+   match state with
+   |State.ServedOrder Order ->
+      match (payment Order).Amount = payment'.Amount with
+      | true ->  [TabClosed payment'] |> Ok
+      | false ->  InvalidPayment ((payment Order).Amount,  payment'.Amount  ) |> Error
+      //[TabClosed payment'] |> Ok
+   | _ -> 
+      CanNotPayForNonServedOrder |> Error
+   //|  _ -> 
+   //   sprintf "Close tab não implementado para o stado %A" state
+   //   |> failwith
+   
 
 //TODO: APÓS FINALIZADO O LIVRO, VERIFICAR A POSSIBILIDADE DE RETIRAR O A CCHESSIE LIB
 ///Executa o comando solicitado e responde com os eventos consequentes
@@ -139,6 +175,7 @@ let execute state command =
    | ServeDrink (drink, tabId) -> handleServeDrink  drink tabId state
    | PrepareFood (food, tabId) -> handlePrepareFood food tabId state
    | ServeFood (food, tabId) -> handleServeFood food tabId state
+   |  CloseTab pay -> handleCloseTab pay state
    | _ -> 
       sprintf "O Comando %A não foii implementado para o estado %A" command state
       |> failwith 

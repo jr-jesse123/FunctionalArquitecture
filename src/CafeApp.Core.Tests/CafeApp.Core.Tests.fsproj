@@ -8,6 +8,7 @@
   <ItemGroup>
     <Compile Include="TestData.fs" />
     <Compile Include="CafeAppTestsDSL.fs" />
+    <Compile Include="CloseTabTests.fs" />
     <Compile Include="ServeFoodTests.fs" />
     <Compile Include="PrepareFoodTests.fs" />
     <Compile Include="ServeDrinksTests.fs" />
