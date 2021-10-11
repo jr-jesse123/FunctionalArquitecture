@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Table.fsi" />
+    <Compile Include="Table.fs" />
+    <Compile Include="Chef.fsi" />
+    <Compile Include="Chef.fs" />
+    <Compile Include="Waiter.fsi" />
+    <Compile Include="Waiter.fs" />
+    <Compile Include="Cashier.fsi" />
+    <Compile Include="Cashier.fs" />
+    <Compile Include="teste.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CafeApp.Persistence\CafeApp.Persistence.fsproj" />
+  </ItemGroup>
+
+</Project>

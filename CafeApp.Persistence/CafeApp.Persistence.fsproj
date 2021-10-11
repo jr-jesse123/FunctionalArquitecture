@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="ReadModels.fs" />
+    <Compile Include="Projections.fs" />
+    <Compile Include="Queries.fs" />
+    <Compile Include="EventStore.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NEventStore" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\CafeApp.Core\CafeApp.Core.fsproj" />
+  </ItemGroup>
+
+</Project>

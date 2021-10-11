@@ -35,7 +35,17 @@
       "ProjectGuid": "3f326a34-f57e-437f-a9d1-e00dbd2984c5",
       "DisplayName": "_build",
       "ColorIndex": 5
+    },
+    "0fdfa569-5e37-47e9-8f23-ce0470d43815": {
+      "ProjectGuid": "0fdfa569-5e37-47e9-8f23-ce0470d43815",
+      "DisplayName": "CafeApp.Persistence",
+      "ColorIndex": 6
+    },
+    "d838a6a2-3513-4748-b218-51888baf1113": {
+      "ProjectGuid": "d838a6a2-3513-4748-b218-51888baf1113",
+      "DisplayName": "CafeApp.Persistence.InMemory",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 8
 }

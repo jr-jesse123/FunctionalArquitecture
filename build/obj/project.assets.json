@@ -268,6 +268,15 @@
           "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
+      "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        }
+      },
       "Microsoft.IdentityModel.Clients.ActiveDirectory/5.2.4": {
         "type": "package",
         "dependencies": {
@@ -404,6 +413,18 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "NEventStore/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/NEventStore.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/NEventStore.dll": {}
         }
       },
       "Newtonsoft.Json/12.0.3": {
@@ -2478,6 +2499,27 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
+      "sha512": "NxP6ahFcBnnSfwNBi2KH2Oz8Xl5Sm2krjId/jRR3I7teFphwiUoUeZPwTNA21EX+5PtjqmyAvKaOeBXcJjcH/w==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec",
+        "paket-installmodel.cache",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Microsoft.IdentityModel.Clients.ActiveDirectory/5.2.4": {
       "sha512": "UDn9cidGDrE46jRxyhFtsxN7CQ0uFIYmlLDsguWvRnhqlBgDugsmVVUH2jyyds2rxrfPl7EvQfyBFjfibLX8eA==",
       "type": "package",
@@ -2804,6 +2846,21 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec",
+        "paket-installmodel.cache"
+      ]
+    },
+    "NEventStore/8.0.0": {
+      "sha512": "ni5M2fJZ3w96DPbelIicUyI8z43WizXyh2aRi/ExNiuLemrlw3nDToRdXn6i4Lho/HAD1KVwhbwpSxaInjpGtw==",
+      "type": "package",
+      "path": "neventstore/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/NEventStore.dll",
+        "lib/net5.0/NEventStore.dll",
+        "lib/netstandard2.0/NEventStore.dll",
+        "neventstore.8.0.0.nupkg.sha512",
+        "neventstore.nuspec",
         "paket-installmodel.cache"
       ]
     },
@@ -7537,8 +7594,10 @@
       "FSharp.Core >= 6.0.0",
       "FsUnit >= 4.0.6",
       "FsUnit.xUnit >= 4.0.6",
+      "Microsoft.Extensions.Logging.Abstractions >= 5.0.0",
       "Microsoft.NETCore.Platforms >= 5.0.3",
       "NETStandard.Library >= 2.0.3",
+      "NEventStore >= 8.0.0",
       "NHamcrest >= 2.0.1",
       "NUnit >= 3.13.2",
       "Nuke.Common >= 5.3.0",
@@ -7614,6 +7673,10 @@
             "target": "Package",
             "version": "[4.0.6, )"
           },
+          "Microsoft.Extensions.Logging.Abstractions": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
           "Microsoft.NETCore.Platforms": {
             "target": "Package",
             "version": "[5.0.3, )"
@@ -7621,6 +7684,10 @@
           "NETStandard.Library": {
             "target": "Package",
             "version": "[2.0.3, )"
+          },
+          "NEventStore": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           },
           "NHamcrest": {
             "target": "Package",

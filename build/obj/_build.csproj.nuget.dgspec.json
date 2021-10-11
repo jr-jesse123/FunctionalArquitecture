@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[4.0.6, )"
             },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.NETCore.Platforms": {
               "target": "Package",
               "version": "[5.0.3, )"
@@ -69,6 +73,10 @@
             "NETStandard.Library": {
               "target": "Package",
               "version": "[2.0.3, )"
+            },
+            "NEventStore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "NHamcrest": {
               "target": "Package",

@@ -7,6 +7,7 @@ nuget Fake.Dotnet.Testing.Xunit2
 nuget FSharp.Core
 nuget FsUnit
 nuget FsUnit.xUnit
+nuget NEventStore
 nuget Xunit
 nuget xunit.runner.console
 nuget System.Management.Automation
