@@ -23,17 +23,19 @@ let getTabIdFromState = function
 
 
 let saveEvent (storeEvents: IStoreEvents) state event = 
-   match getTabIdFromState state with
-   |Some tabId -> 
-      use stream = storeEvents.OpenStream(tabId.ToString())
-      stream.Add(new EventMessage(Body = event))
-      stream.CommitChanges(Guid.NewGuid())
-   | _ -> failwith "quero saber quando que chega aqui"
+   
+      match getTabIdFromState state with
+      |Some tabId -> 
+         use stream = storeEvents.OpenStream(tabId.ToString())
+         stream.Add(new EventMessage(Body = event))
+         stream.CommitChanges(Guid.NewGuid())
+      | _ -> failwith "quero saber quando que chega aqui"
+   
 
 
 let saveEvents (storeEvents:IStoreEvents) state events = 
    async {
-      return List.iter (saveEvent storeEvents state) events
+      return List.iter (saveEvent storeEvents state ) events
    }
    //|> async.Return
 
@@ -54,6 +56,7 @@ let getState storeEvents tabId =
 
 type EventStore = {
    GetState : Guid -> Async<State>
-   SaveEvent : State -> Event -> Async<unit>
+//   SaveEvent : State -> Event -> Async<unit>
+   SaveEvents : State -> Event list -> Async<unit>
 }
    

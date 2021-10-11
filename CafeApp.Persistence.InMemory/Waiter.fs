@@ -1,4 +1,4 @@
-﻿module Chefe
+﻿module Waiter
 
 open Projections
 open ReadModel
@@ -66,3 +66,9 @@ let waiterActions = {
    MarkFoodServed = markFoodServed
    Remove=remove
 }
+
+let getWaiterTodos () =
+   async{
+      return Seq.toList waiterTodos.Values 
+   }
+   

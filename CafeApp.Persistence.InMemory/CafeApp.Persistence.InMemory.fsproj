@@ -15,7 +15,7 @@
     <Compile Include="Waiter.fs" />
     <Compile Include="Cashier.fsi" />
     <Compile Include="Cashier.fs" />
-    <Compile Include="teste.fs" />
+    <Compile Include="InMemory.fs" />
   </ItemGroup>
 
   <ItemGroup>
