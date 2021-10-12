@@ -74,3 +74,8 @@ D:\aulas\fsapplied_1\CafeApp\build\bin\Debug\ru\FSharp.Core.resources.dll
 D:\aulas\fsapplied_1\CafeApp\build\bin\Debug\tr\FSharp.Core.resources.dll
 D:\aulas\fsapplied_1\CafeApp\build\bin\Debug\zh-Hans\FSharp.Core.resources.dll
 D:\aulas\fsapplied_1\CafeApp\build\bin\Debug\zh-Hant\FSharp.Core.resources.dll
+D:\aulas\fsapplied_1\CafeApp\build\bin\Debug\Chessie.dll
+D:\aulas\fsapplied_1\CafeApp\build\bin\Debug\FSharp.Data.dll
+D:\aulas\fsapplied_1\CafeApp\build\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\aulas\fsapplied_1\CafeApp\build\bin\Debug\NEventStore.dll
+D:\aulas\fsapplied_1\CafeApp\build\obj\Debug\_build.csproj.CopyComplete

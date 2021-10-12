@@ -14,18 +14,6 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft\Xamarin\NuGet\" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <None Include="$(NuGetPackageRoot)fsharp.core\6.0.0\contentFiles\any\netstandard2.1\FSharp.Core.xml" Condition="Exists('$(NuGetPackageRoot)fsharp.core\6.0.0\contentFiles\any\netstandard2.1\FSharp.Core.xml')">
-      <NuGetPackageId>FSharp.Core</NuGetPackageId>
-      <NuGetPackageVersion>6.0.0</NuGetPackageVersion>
-      <NuGetItemType>None</NuGetItemType>
-      <Pack>false</Pack>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>FSharp.Core.xml</TargetPath>
-      <Private>True</Private>
-      <Link>FSharp.Core.xml</Link>
-    </None>
-  </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)xunit.runner.console\2.4.1\build\xunit.runner.console.props" Condition="Exists('$(NuGetPackageRoot)xunit.runner.console\2.4.1\build\xunit.runner.console.props')" />
     <Import Project="$(NuGetPackageRoot)xunit.core\2.4.1\build\xunit.core.props" Condition="Exists('$(NuGetPackageRoot)xunit.core\2.4.1\build\xunit.core.props')" />
@@ -43,7 +31,7 @@
     <Pkgxunit Condition=" '$(Pkgxunit)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\xunit\2.4.1</Pkgxunit>
     <PkgSystem_Runtime_CompilerServices_Unsafe Condition=" '$(PkgSystem_Runtime_CompilerServices_Unsafe)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\system.runtime.compilerservices.unsafe\5.0.0</PkgSystem_Runtime_CompilerServices_Unsafe>
     <PkgSystem_Collections_Immutable Condition=" '$(PkgSystem_Collections_Immutable)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\system.collections.immutable\5.0.0</PkgSystem_Collections_Immutable>
-    <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fsharp.core\6.0.0</PkgFSharp_Core>
+    <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fsharp.core\5.0.0</PkgFSharp_Core>
     <PkgFake_Core_Context Condition=" '$(PkgFake_Core_Context)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.core.context\5.20.4</PkgFake_Core_Context>
     <PkgFake_Core_FakeVar Condition=" '$(PkgFake_Core_FakeVar)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.core.fakevar\5.20.4</PkgFake_Core_FakeVar>
     <PkgFake_Core_Environment Condition=" '$(PkgFake_Core_Environment)' == '' ">C:\Users\JESSE JUNIOR\.nuget\packages\fake.core.environment\5.20.4</PkgFake_Core_Environment>

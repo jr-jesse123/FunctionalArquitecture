@@ -1178,7 +1178,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "FSharp.Core": "6.0.0",
+          "FSharp.Core": "5.0.0",
           "Fake.Core.Context": "5.20.4",
           "Fake.Core.Environment": "5.20.4",
           "Fake.Core.FakeVar": "5.20.4",

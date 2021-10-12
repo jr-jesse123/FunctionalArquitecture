@@ -185,7 +185,7 @@
           "dependencies": {
             "FSharp.Core": {
               "target": "Package",
-              "version": "[6.0.0, )",
+              "version": "[5.0.0, )",
               "generatePathProperty": true
             },
             "Fake.Core.Context": {

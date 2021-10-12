@@ -8,10 +8,14 @@
     ".NETCoreApp,Version=v5.0": {
       "_build/1.0.0": {
         "dependencies": {
+          "Chessie": "0.6.0",
           "FSharp.Core": "6.0.0",
+          "FSharp.Data": "4.2.3",
           "FsUnit": "4.0.6",
           "FsUnit.xUnit": "4.0.6",
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0",
           "Microsoft.NETCore.Platforms": "5.0.3",
+          "NEventStore": "8.0.0",
           "NHamcrest": "2.0.1",
           "NUnit": "3.13.2",
           "Nuke.Common": "5.3.0",
@@ -25,6 +29,18 @@
         },
         "runtime": {
           "_build.dll": {}
+        }
+      },
+      "Chessie/0.6.0": {
+        "dependencies": {
+          "FSharp.Core": "6.0.0",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Chessie.dll": {
+            "assemblyVersion": "0.6.0.0",
+            "fileVersion": "0.0.0.0"
+          }
         }
       },
       "FSharp.Core/6.0.0": {
@@ -73,6 +89,17 @@
           },
           "lib/netstandard2.1/zh-Hant/FSharp.Core.resources.dll": {
             "locale": "zh-Hant"
+          }
+        }
+      },
+      "FSharp.Data/4.2.3": {
+        "dependencies": {
+          "FSharp.Core": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.Data.dll": {
+            "assemblyVersion": "4.2.3.0",
+            "fileVersion": "4.2.3.0"
           }
         }
       },
@@ -253,6 +280,14 @@
           "System.Threading": "4.3.0"
         }
       },
+      "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
       "Microsoft.IdentityModel.Clients.ActiveDirectory/5.2.4": {
         "dependencies": {
           "Microsoft.CSharp": "4.3.0",
@@ -343,6 +378,17 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.3"
+        }
+      },
+      "NEventStore/8.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/NEventStore.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
         }
       },
       "Newtonsoft.Json/12.0.3": {
@@ -1410,12 +1456,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Chessie/0.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EzfvxiU+b9WmW2C1Q4Ns2AX2IAq6I6n8P+Lv4gzKmeDoj8FD+goHLMqwoaE08E91nQwlEzxd9iwkdwf5E5YGCQ==",
+      "path": "chessie/0.6.0",
+      "hashPath": "chessie.0.6.0.nupkg.sha512"
+    },
     "FSharp.Core/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-fbv1UwJ2LXVcFCt+GGDPu0sIYA5C6gdDvAupDj3iLQF3clRkua/6J33f+FiGQa8P1tEa+zmz3wrjoTnXZ1UiYg==",
       "path": "fsharp.core/6.0.0",
       "hashPath": "fsharp.core.6.0.0.nupkg.sha512"
+    },
+    "FSharp.Data/4.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GNghvgsxu8Ea9beKOgc6VTm3UnixPSlf/S+BPWNCsifSzNevvlnoTKjXVVQfHOtKLbbGGbqQxMKuV0GaE6oXYA==",
+      "path": "fsharp.data/4.2.3",
+      "hashPath": "fsharp.data.4.2.3.nupkg.sha512"
     },
     "FsUnit/4.0.6": {
       "type": "package",
@@ -1501,6 +1561,13 @@
       "path": "microsoft.csharp/4.3.0",
       "hashPath": "microsoft.csharp.4.3.0.nupkg.sha512"
     },
+    "Microsoft.Extensions.Logging.Abstractions/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NxP6ahFcBnnSfwNBi2KH2Oz8Xl5Sm2krjId/jRR3I7teFphwiUoUeZPwTNA21EX+5PtjqmyAvKaOeBXcJjcH/w==",
+      "path": "microsoft.extensions.logging.abstractions/5.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512"
+    },
     "Microsoft.IdentityModel.Clients.ActiveDirectory/5.2.4": {
       "type": "package",
       "serviceable": true,
@@ -1563,6 +1630,13 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "NEventStore/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ni5M2fJZ3w96DPbelIicUyI8z43WizXyh2aRi/ExNiuLemrlw3nDToRdXn6i4Lho/HAD1KVwhbwpSxaInjpGtw==",
+      "path": "neventstore/8.0.0",
+      "hashPath": "neventstore.8.0.0.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",

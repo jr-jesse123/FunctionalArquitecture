@@ -10,4 +10,16 @@
     <Compile Include="Program.fs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Suave" Version="2.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CafeApp.Commands.Api\CafeApp.Commands.Api.fsproj" />
+    <ProjectReference Include="..\CafeApp.Persistence.InMemory\CafeApp.Persistence.InMemory.fsproj" />
+    <ProjectReference Include="..\CafeApp.Persistence\CafeApp.Persistence.fsproj" />
+    <ProjectReference Include="..\src\CafeApp.Core.Tests\CafeApp.Core.Tests.fsproj" />
+    <ProjectReference Include="..\src\CafeApp.Core\CafeApp.Core.fsproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "x/cDTH8r1czN4bitCJ1XulWOCNQzil4QB4WEp1Cb26jhH8jfJPkvP3fXADgbXRGmwY1Kjd64EJwfi0Inchq/iA==",
+  "dgSpecHash": "Bin5HZuj28RSGbcaIH1bwv8oNxrdm5wofoPaW9/KfPlnzssGzDiO3h8WT/5FdtYqffWoEDmG5P42wOJDAOIO9w==",
   "success": true,
   "projectFilePath": "D:\\aulas\\fsapplied_1\\CafeApp\\src\\CafeApp.Core\\CafeApp.Core.fsproj",
   "expectedPackageFiles": [
@@ -13,7 +13,7 @@
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fake.dotnet.testing.xunit2\\5.20.4\\fake.dotnet.testing.xunit2.5.20.4.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fake.io.filesystem\\5.20.4\\fake.io.filesystem.5.20.4.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fake.testing.common\\5.20.4\\fake.testing.common.5.20.4.nupkg.sha512",
-    "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fsharp.core\\6.0.0\\fsharp.core.6.0.0.nupkg.sha512",
+    "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.3\\microsoft.netcore.platforms.5.0.3.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
