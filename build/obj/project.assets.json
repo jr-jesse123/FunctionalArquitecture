@@ -73,6 +73,18 @@
           }
         }
       },
+      "FSharp.Data/4.2.3": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.7.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/FSharp.Data.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.Data.dll": {}
+        }
+      },
       "FsUnit/4.0.6": {
         "type": "package",
         "dependencies": {
@@ -2239,6 +2251,23 @@
         "lib/netstandard2.1/zh-Hans/FSharp.Core.resources.dll",
         "lib/netstandard2.1/zh-Hant/FSharp.Core.resources.dll",
         "paket-installmodel.cache"
+      ]
+    },
+    "FSharp.Data/4.2.3": {
+      "sha512": "GNghvgsxu8Ea9beKOgc6VTm3UnixPSlf/S+BPWNCsifSzNevvlnoTKjXVVQfHOtKLbbGGbqQxMKuV0GaE6oXYA==",
+      "type": "package",
+      "path": "fsharp.data/4.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fsharp.data.4.2.3.nupkg.sha512",
+        "fsharp.data.nuspec",
+        "lib/netstandard2.0/FSharp.Data.dll",
+        "lib/netstandard2.0/FSharp.Data.xml.zip",
+        "logo.png",
+        "paket-installmodel.cache",
+        "typeproviders/fsharp41/netstandard2.0/FSharp.Data.DesignTime.deps.json",
+        "typeproviders/fsharp41/netstandard2.0/FSharp.Data.DesignTime.dll"
       ]
     },
     "FsUnit/4.0.6": {
@@ -7592,6 +7621,7 @@
     "net5.0": [
       "Chessie >= 0.6.0",
       "FSharp.Core >= 6.0.0",
+      "FSharp.Data >= 4.2.3",
       "FsUnit >= 4.0.6",
       "FsUnit.xUnit >= 4.0.6",
       "Microsoft.Extensions.Logging.Abstractions >= 5.0.0",
@@ -7664,6 +7694,10 @@
           "FSharp.Core": {
             "target": "Package",
             "version": "[6.0.0, )"
+          },
+          "FSharp.Data": {
+            "target": "Package",
+            "version": "[4.2.3, )"
           },
           "FsUnit": {
             "target": "Package",

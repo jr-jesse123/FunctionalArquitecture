@@ -45,7 +45,12 @@
       "ProjectGuid": "d838a6a2-3513-4748-b218-51888baf1113",
       "DisplayName": "CafeApp.Persistence.InMemory",
       "ColorIndex": 7
+    },
+    "5b46399a-6aed-48a9-8c4b-06895269bc93": {
+      "ProjectGuid": "5b46399a-6aed-48a9-8c4b-06895269bc93",
+      "DisplayName": "CafeApp.Commands.Api",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 8
+  "NextColorIndex": 9
 }

@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "FSharp.Data": {
+              "target": "Package",
+              "version": "[4.2.3, )"
+            },
             "FsUnit": {
               "target": "Package",
               "version": "[4.0.6, )"

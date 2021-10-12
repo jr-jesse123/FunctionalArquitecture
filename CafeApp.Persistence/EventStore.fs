@@ -8,10 +8,6 @@ open System
 open NEventStore
 open Events
 open Domain
-open System
-open System
-open System.Runtime.Intrinsics.Arm
-open System
 
 let getTabIdFromState = function
 | ClosedTab None -> None
@@ -21,7 +17,6 @@ let getTabIdFromState = function
 | ServedOrder payment -> Some payment.Tab.Id
 | ClosedTab (Some tabId) -> Some tabId
 
-
 let saveEvent (storeEvents: IStoreEvents) state event = 
    
       match getTabIdFromState state with
@@ -30,8 +25,6 @@ let saveEvent (storeEvents: IStoreEvents) state event =
          stream.Add(new EventMessage(Body = event))
          stream.CommitChanges(Guid.NewGuid())
       | _ -> failwith "quero saber quando que chega aqui"
-   
-
 
 let saveEvents (storeEvents:IStoreEvents) state events = 
    async {

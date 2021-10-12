@@ -5,6 +5,7 @@ open Domain
 
 type TableQueries = {
    GetTables : unit -> Async<Table list>
+   GetTableByTableNumber : int -> Async<Table option>
 }
 
 type ToDoQueries = {
