@@ -14,6 +14,8 @@ open Suave
 open Events 
 open Projections
 open JsonFormatter
+open QueriesApi
+
 
 let eventsStream = new Event<Event list>()
 
@@ -46,13 +48,34 @@ let project event =
 
 let projectEvents = List.iter project
 
+open Suave.Sockets
+open Suave.Sockets.Control
+open Suave.WebSocket
 
+
+let socketHandler (ws: WebSocket) cx = 
+   socket {
+      while true do
+         let! events = 
+            Control.Async.AwaitEvent(eventsStream.Publish)
+            |> Suave.Sockets.SocketOp.ofAsync
+
+         for event in events do 
+            let eventData = 
+               event |> eventJObj |> string |> Encoding.UTF8.GetBytes
+            do! ws.send Text eventData true
+   }
+
+open Suave.WebSocket
 [<EntryPoint>]
 let main argv =
    let app = 
       let eventStore = inMemoryEventStore ()
       choose [
+         path "/websocket" >=>
+            handShake (socketHandler)
          commandApi eventStore
+         queriesApi inMemoryQueries eventStore
       ]
 
    let cfg = 

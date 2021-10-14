@@ -48,15 +48,25 @@ let getDrinksByMenuNumbers keys =
    getItems Drinks keys |> async.Return
 
 
+
+
 open Queries
+
+let getFoods () = 
+   Foods.Values |> Seq.toList |> async.Return
+
+let getDrinks () =
+   Drinks.Values |> Seq.toList |> async.Return
 
 let foodQueries = {
    GetFoodsByMenuNumbers = getFoodsBymenuNumbers 
    GetFoodByMenuNumber = getFoodByMenuNumber
+   GetFoods = getFoods
 }
    
 
 let drinkQueries = {
    GetDrinksByMenuNumbers = getDrinksByMenuNumbers
    getDrinkByMenuNumber = getDrinksByMenuNumber
+   GetDrinks = getDrinks
 }

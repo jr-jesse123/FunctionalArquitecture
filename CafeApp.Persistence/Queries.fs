@@ -13,11 +13,13 @@ type TableQueries = {
 type FoodQueries = {
    GetFoodsByMenuNumbers: int[] -> Async<Choice<Food list, int[]>>
    GetFoodByMenuNumber: int -> Async<Food option>
+   GetFoods: unit -> Async<Food list>
 }
 
 type DrinkQueries = {
    GetDrinksByMenuNumbers: int[] -> Async<Choice<Drink list, int[]>>
    getDrinkByMenuNumber : int -> Async<Drink option>
+   GetDrinks: unit -> Async<Drink list>
 }
 
 type ToDoQueries = {

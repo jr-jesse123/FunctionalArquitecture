@@ -150,5 +150,124 @@ open CommandHandler
 open Suave.RequestErrors
 
 let toErrorJson err = 
-   jobj["error" .= err]
+   jobj ["error" .= err]
    |> string |> JSON BAD_REQUEST
+
+
+open ReadModel
+let statusJobj = function
+| Open tabId -> 
+   "status" .= jobj ["open" .= tabId.ToString()]
+| InService tabId ->
+   "status" .= jobj [ "inService" .= tabId.ToString() ]
+| Closed -> "status" .= "closed"
+
+
+let tableJObj table =
+   jobj [
+      "number" .= table.Number
+      "waiter" .= table.Waiter
+      statusJobj table.Status
+   ]
+
+let toReadModelsJson toJObj key models = 
+   models
+   |> List.map toJObj |> jArray
+   |> (.=) key |> List.singleton |> jobj
+   |> string |> JSON OK
+
+
+let toTablesJSON = toReadModelsJson tableJObj "tables"
+
+
+let chefToDOJObj (todo: ChefToDo)  = 
+   jobj [
+      "tabId" .= todo.Tab.Id.ToString()
+      "tableNumber" .= todo.Tab.TableNumber
+      "foods" .= foodJArray todo.Foods
+   ]
+
+let toChefToDosJSON = 
+   toReadModelsJson chefToDOJObj "chefToDos"
+
+let waiterToDoObj todo = 
+   jobj [
+      "tabId" .= todo.Tab.Id.ToString()
+      "tableNumber" .= todo.Tab.TableNumber
+      "foods" .= foodJArray todo.Foods
+      "drinks" .= drinkJArray todo.Drinks
+   ]
+
+let toWaiterToDosJSON =
+   toReadModelsJson waiterToDoObj "waiterToDos"
+
+let cashierToDoJObj (payment: Payment) =
+   jobj [
+      "tabId" .= payment.Tab.Id.ToString()
+      "tableNumber" .= payment.Tab.TableNumber
+      "paymentAmount" .= payment.Amount
+   ]
+
+let toCashierToDosJSON = 
+   toReadModelsJson cashierToDoJObj  "cashierToDos"
+
+
+let toFoodsJSON =
+   toReadModelsJson foodJObj "foods"
+
+
+let toDrinksJSON =
+   toReadModelsJson drinkJObj "drinks"
+
+open Events
+
+let eventJObj =  function
+| TabOpened tab ->
+   jobj [
+      "event" .= "TabOpened"
+      "data" .= tabJObj tab
+   ]
+
+| OrderPlaced order ->
+   jobj [
+      "event" .= "OrderPlaced"
+      "data" .= jobj [
+         "order" .= orderJObj order
+      ]
+   ]
+
+
+| DrinkServed (item,tabId) ->
+   jobj  [
+      "event"   .= "DrinkServed"
+      "data" .= jobj [
+         "drink".= drinkJObj item
+         "tabId" .= tabId
+      ]
+   ]
+
+| FoodPrepared (item,tabId) ->
+   jobj [
+      "event" .= "FoodPrepared"
+      "data" .= jobj [
+         "food" .= foodJObj item
+         "tabId" .= tabId
+      ]
+   ]
+
+| OrderServed (order, payment) ->
+   jobj [
+      "event" .= "OrderServed"
+      "data" .= payment.Tab.Id
+      "tableNumber" .= payment.Tab.TableNumber
+      "amount" .= payment.Amount
+   ]
+
+| TabClosed payment ->
+   jobj [
+      "event" .= "TabClosed"
+      "data" .= jobj [
+         "amountPaid" .= payment.Amount
+         "tabId" .= payment.Tab.TableNumber
+      ]
+   ]
