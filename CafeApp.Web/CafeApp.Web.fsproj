@@ -7,10 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="JsonFormatter.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Suave" Version="2.6.1" />
   </ItemGroup>
 

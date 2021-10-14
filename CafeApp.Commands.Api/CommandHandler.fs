@@ -7,6 +7,7 @@ open CommandHandlers
 open NEventStore
 open EventStore
 
+
 type Commander<'a,'b> = {
    Validate : 'a -> Async<Choice<'b,string>> //TODO: TROCAR PRA RESULT
    ToCommand : 'b -> Command

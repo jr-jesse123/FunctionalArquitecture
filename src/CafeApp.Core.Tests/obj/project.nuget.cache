@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MxD/WHZjoQHOj7GmoFH7n8dt0yhbfwGEOYn7OlqaVQ+jmoGZ5H5G+YUN93ORxeQLQFTZEQD2brc6CQNL6Y4fXQ==",
+  "dgSpecHash": "l5t1kBj7aobgZ3nLw6qYIxX0f359PGAUOL0Q9w9xckdci63R1yiYPZfFfv/YW+sC3jqZ2VoO5YCKRl6fVSNE3Q==",
   "success": true,
   "projectFilePath": "D:\\aulas\\fsapplied_1\\CafeApp\\src\\CafeApp.Core.Tests\\CafeApp.Core.Tests.fsproj",
   "expectedPackageFiles": [

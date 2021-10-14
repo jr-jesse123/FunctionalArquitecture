@@ -26,6 +26,7 @@ let closeTab tab =
    tables.[tableNumber] <- {table with Status = Closed}
    async.Return ()
 
+//TODO: DESCOBRIR ONDE ESTA FUNÇÃO É UTILIZADA E PORQUE ELA É SEPARADA DA FUNÇÃO DE BAIXO
 let getTableByTabId tabId =
    tables.Values
    |> Seq.tryFind( fun t ->
@@ -33,6 +34,11 @@ let getTableByTabId tabId =
       | (Open id) | (InService id) -> id = tabId
       | _ -> false
    )
+
+let getTableByTabIdAsync tabId = 
+   async{
+      return getTableByTabId tabId
+   }
 
 let  receivedOrder tabId =
    match getTableByTabId tabId with
@@ -65,5 +71,6 @@ let getTableByTablenumber tablenumber =
 
 let tableQueries = {
    GetTables = getTables
+   GetTableByTabid = getTableByTabIdAsync
    GetTableByTableNumber = getTableByTablenumber
 }
