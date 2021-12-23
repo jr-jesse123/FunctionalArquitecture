@@ -45,6 +45,7 @@ let getFoodsBymenuNumbers keys =
    
 
 let getDrinksByMenuNumbers keys = 
+   printfn "chaves: %A" keys
    getItems Drinks keys |> async.Return
 
 

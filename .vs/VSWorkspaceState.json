@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\client",
+    "\\src"
   ],
   "SelectedNode": "\\CafeApp.sln",
   "PreviewInSolutionExplorer": false

@@ -24,7 +24,7 @@ let saveEvent (storeEvents: IStoreEvents) state event =
          use stream = storeEvents.OpenStream(tabId.ToString())
          stream.Add(new EventMessage(Body = event))
          stream.CommitChanges(Guid.NewGuid())
-      | _ -> failwith "quero saber quando que chega aqui"
+      | _ -> failwith "CHEGA AQUI QUANDO NÃO ENCONTRA O STATE NÃO TEM UM TABID" //
 
 let saveEvents (storeEvents:IStoreEvents) state events = 
    async {
@@ -32,8 +32,9 @@ let saveEvents (storeEvents:IStoreEvents) state events =
    }
    //|> async.Return
 
-let getEvents (StoreEvents:IStoreEvents) tabId = 
-   use stream = StoreEvents.OpenStream((tabId:Guid).ToString())
+let getEvents (storeEvents:IStoreEvents) tabId = 
+   use stream = storeEvents.OpenStream((tabId:Guid).ToString())
+      
    stream.CommittedEvents
    |> Seq.map (fun msg -> msg.Body)
    |> Seq.cast<Event>

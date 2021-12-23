@@ -5,6 +5,9 @@ open ReadModel
 open Projections
 open Queries
 
+//TODO: COMO SE RELACIONAM OS IN MEMORYS DO NEVEVNTS E AS IMPLEMENTAÇÕES DE DICIONÁRIOS DESTE PROJETO?
+
+
 //TODO: TROCAR O DICIONARIO PELO MAP
 let  tables =
    let dict = new Dictionary<int, Table>()
@@ -26,7 +29,7 @@ let closeTab tab =
    tables.[tableNumber] <- {table with Status = Closed}
    async.Return ()
 
-//TODO: DESCOBRIR ONDE ESTA FUNÇÃO É UTILIZADA E PORQUE ELA É SEPARADA DA FUNÇÃO DE BAIXO
+//TODO: DESCOBRIR ONDE ESTA FUNÇÃO É UTILIZADA fE PORQUE ELA É SEPARADA DA FUNÇÃO DE BAIXO
 let getTableByTabId tabId =
    tables.Values
    |> Seq.tryFind( fun t ->

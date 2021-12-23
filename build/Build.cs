@@ -13,6 +13,7 @@ using static Nuke.Common.EnvironmentInfo;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
+using static Nuke.Common.Tools.Npm.NpmTasks;
 
 [CheckBuildProjectConfigurations]
 [ShutdownDotNetAfterServerBuild]
@@ -24,7 +25,7 @@ class Build : NukeBuild
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
 
-    public static int Main () => Execute<Build>(x => x.RunTests);
+    public static int Main () => Execute<Build>(x => x.PublishSite);
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
@@ -71,5 +72,14 @@ class Build : NukeBuild
         });
 
     });
+
+    Target PublishSite => _ => _
+        .DependsOn(RunTests)
+        .Executes(() =>
+            {
+                Npm("install");
+                Npm("run build");
+            }
+        );
 
 }

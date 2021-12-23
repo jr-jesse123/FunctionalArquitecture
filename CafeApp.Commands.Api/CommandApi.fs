@@ -20,9 +20,9 @@ let handleCommandRequest validationQueries eventStore cmdStr=  async{
       return! handleCommand eventStore tab commander
 
    | PlaceOrderRequest placeOrder ->
-      return!
-         placeOrderCommander validationQueries 
-         |> handleCommand eventStore placeOrder
+         let commander =  placeOrderCommander validationQueries 
+         let out = handleCommand eventStore placeOrder commander
+         return! out
       
    | ServeDrinkRequest (tabId,menuNumber) ->
       

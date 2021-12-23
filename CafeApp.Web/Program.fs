@@ -51,12 +51,26 @@ let projectEvents = List.iter project
 open Suave.Sockets
 open Suave.Sockets.Control
 open Suave.WebSocket
+open System.Reflection
+open System.IO
+
+let trace x = 
+   printfn "%A" x
+   x
+
+let clientDir = 
+   let exePath = Assembly.GetEntryAssembly().Location
+   let exedir = (FileInfo(exePath)).Directory
+   Path.Combine(exedir.FullName, "public")
+   |> trace
 
 
 let socketHandler (ws: WebSocket) cx = 
    socket {
       while true do
          let! events = 
+
+         //TODO: TESTAR EM ITERATIVO
             Control.Async.AwaitEvent(eventsStream.Publish)
             |> Suave.Sockets.SocketOp.ofAsync
 
@@ -67,6 +81,8 @@ let socketHandler (ws: WebSocket) cx =
    }
 
 open Suave.WebSocket
+open Suave
+
 [<EntryPoint>]
 let main argv =
    let app = 
@@ -76,13 +92,26 @@ let main argv =
             handShake (socketHandler)
          commandApi eventStore
          queriesApi inMemoryQueries eventStore
+
+         path "/" >=> Files.browseFileHome "index.html" 
+         Filters.GET >=> choose [
+            Files.browseHome
+         ]
+
+         Suave.RequestErrors.NOT_FOUND "não achei"
       ]
 
    let cfg = 
-      {defaultConfig with bindings=[HttpBinding.createSimple HTTP "0.0.0.0" 8083]}
+      {defaultConfig with
+         homeFolder = Some(clientDir)
+         bindings=[HttpBinding.createSimple HTTP "0.0.0.0" 8083]}
+
+   eventsStream.Publish.Add(projectEvents)
+   eventsStream.Publish.Add(printfn "%A")
+   
 
    startWebServer cfg app
 
-   eventsStream.Publish.Add(projectEvents)
+
    
    0 

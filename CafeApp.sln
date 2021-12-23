@@ -13,9 +13,23 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "CafeApp.Persistence", "Cafe
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "CafeApp.Persistence.InMemory", "CafeApp.Persistence.InMemory\CafeApp.Persistence.InMemory.fsproj", "{D838A6A2-3513-4748-B218-51888BAF1113}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CafeApp.Commands.Api", "CafeApp.Commands.Api\CafeApp.Commands.Api.fsproj", "{92EF346C-7334-4D22-997E-C612E483B9D6}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "CafeApp.Commands.Api", "CafeApp.Commands.Api\CafeApp.Commands.Api.fsproj", "{92EF346C-7334-4D22-997E-C612E483B9D6}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CafeApp.Web", "CafeApp.Web\CafeApp.Web.fsproj", "{59259C00-B1EC-4016-B828-1D2E1AA82BD3}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "CafeApp.Web", "CafeApp.Web\CafeApp.Web.fsproj", "{59259C00-B1EC-4016-B828-1D2E1AA82BD3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - CafeApp.Core", "1 - CafeApp.Core", "{2B59BDA6-715A-458B-AFB8-55C7D71BB99F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - CafeApp.Core.Tests", "2 - CafeApp.Core.Tests", "{CEEF53E8-65EE-46F4-9C94-50866CEA2B3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - CafeApp.Persistence", "3 - CafeApp.Persistence", "{4D79591F-4AF5-4E7B-AE89-61280D0422D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - CafeApp.Persistence.InMemory", "4 - CafeApp.Persistence.InMemory", "{D2CE2727-6729-422D-85FC-A238182DB163}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - CafeApp.Commands.Api", "5 - CafeApp.Commands.Api", "{41DACE75-6ACC-4830-9758-45EF8FFB3DF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - CafeApp.Web", "6 - CafeApp.Web", "{5972C5B6-8000-4862-BB0C-703F3FFD0620}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - build", "0 - build", "{5E6B0156-DA60-42F4-91A5-066E74CF0313}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +66,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{67738A25-B0EC-4CFF-9D2B-CD067454F0D1} = {2B59BDA6-715A-458B-AFB8-55C7D71BB99F}
+		{252DC324-D9AD-4E97-A58B-1A06FD9BD04A} = {CEEF53E8-65EE-46F4-9C94-50866CEA2B3E}
+		{3F326A34-F57E-437F-A9D1-E00DBD2984C5} = {5E6B0156-DA60-42F4-91A5-066E74CF0313}
+		{0FDFA569-5E37-47E9-8F23-CE0470D43815} = {4D79591F-4AF5-4E7B-AE89-61280D0422D0}
+		{D838A6A2-3513-4748-B218-51888BAF1113} = {D2CE2727-6729-422D-85FC-A238182DB163}
+		{92EF346C-7334-4D22-997E-C612E483B9D6} = {41DACE75-6ACC-4830-9758-45EF8FFB3DF4}
+		{59259C00-B1EC-4016-B828-1D2E1AA82BD3} = {5972C5B6-8000-4862-BB0C-703F3FFD0620}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {32B017CC-CBE5-4833-9AD6-112F40AC8BD8}

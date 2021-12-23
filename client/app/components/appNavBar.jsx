@@ -12,7 +12,7 @@ var AppNavBar = (props) => {
        </Navbar.Brand>
        <Navbar.Toggle />
      </Navbar.Header>
-     <Navbar.Collapse className="bs-navbar-collapse">
+     {/* <Navbar.Collapse className="bs-navbar-collapse"> */}
        <Nav role="navigation" id="top">
          <LinkContainer to={{pathname : "chef"}}>
            <NavItem>Chef</NavItem>
@@ -27,7 +27,7 @@ var AppNavBar = (props) => {
            <NavItem>Orders</NavItem>
          </LinkContainer>
        </Nav>
-     </Navbar.Collapse>
+     {/* </Navbar.Collapse> */}
    </Navbar>);
 }
 

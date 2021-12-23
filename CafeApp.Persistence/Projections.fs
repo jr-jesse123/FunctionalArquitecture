@@ -3,13 +3,6 @@
 open Events
 open Domain
 open System
-open System
-open CommandHandlers
-open CommandHandlers
-open CommandHandlers
-
-
-
 
 //ACTIONS SÃO COMO COMANDOS POR MUDAREM O ESTADO DO SISTEMA. 
 //PORÉM OS COMANDOS SÃO MENSAGENS QUE SERÃO INTERPRETADOS DENTRO DO SSITEMA
@@ -48,11 +41,11 @@ type ProjectionActions = {
    Chef: ChefActions
    Cachier: CachierActions
 }
-//8465 0000 0001 7999
-//0082 0892 9930 6645
-//1614 3457 8215 5997
+
 
 let Parallel = Async.Parallel
+
+
 let projectReadModel actions = function
    | TabOpened tab ->
       [actions.Table.OpenTab tab] |> Parallel

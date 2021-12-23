@@ -1,10 +1,7 @@
 ﻿module CommandHandler
-open Queries
 open Commands
 open CommandHandlers
 open Errors
-open CommandHandlers
-open NEventStore
 open EventStore
 
 
@@ -34,7 +31,7 @@ let handleCommand (eventStore:EventStore) commandData commander = async {
    match validationResult with
    | Choice1Of2 validatedCommandData ->
       let command = commander.ToCommand validatedCommandData
-      let! state = eventStore.GetState (getTabIdFromCommand command)
+      let! state = eventStore.GetState (getTabIdFromCommand command) //DESCOBRE O ESTADO PELO HISTÓRICO DE EVENTOS
       match evolve state command with
       | Ok(newState, events) ->
          return (newState,events) |> Ok

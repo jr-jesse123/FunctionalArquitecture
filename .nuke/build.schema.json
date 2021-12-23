@@ -73,6 +73,7 @@
             "enum": [
               "Clean",
               "Compile",
+              "PublishSite",
               "Restore",
               "RunTests"
             ]
@@ -90,6 +91,7 @@
             "enum": [
               "Clean",
               "Compile",
+              "PublishSite",
               "Restore",
               "RunTests"
             ]

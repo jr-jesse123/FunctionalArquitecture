@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PWY9/ILAlTHJDh52KnxxKqCx4lNHgu0GnIooESolb5oLLtdi2WsR/Qnr757Qudc39IVhjPZxur+rVBMAmNTDGg==",
+  "dgSpecHash": "3tYG3KyDSxCyu3k+OSHmNahbXL2TpC1iNNyfEyh3ihi8TWBG0k26nr1aBvuu4S7ilDr465pmUu0GdgIDs67y5Q==",
   "success": true,
   "projectFilePath": "D:\\aulas\\fsapplied_1\\CafeApp\\build\\_build.csproj",
   "expectedPackageFiles": [
@@ -143,7 +143,7 @@
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\yamldotnet\\8.0.0\\yamldotnet.8.0.0.nupkg.sha512",
-    "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.11\\microsoft.netcore.app.host.win-x64.5.0.11.nupkg.sha512"
+    "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
   ],
   "logs": []
 }

@@ -8,7 +8,7 @@ let PlaceOrderJson = """{
    "placeOrder" : {
       "tabId" : "2a964d85-f503-40a1-8014-2c8ee5ac4a49",
       "foodMenuNumbers"  : [8,9],
-      "drinkMenunumbers" : [10,11]
+      "drinkMenuNumbers" : [10,11]
    }
 }"""
 
@@ -25,7 +25,7 @@ let validatePlaceOrder (queries:Queries) (c:PlaceorderReq.PlaceOrder) = async{
    match table with
    |  Some table ->
       let! foods =  queries.Food.GetFoodsByMenuNumbers c.FoodMenuNumbers
-      let! drinks = queries.Drink.GetDrinksByMenuNumbers c.DrinkMenunumbers
+      let! drinks = queries.Drink.GetDrinksByMenuNumbers c.DrinkMenuNumbers
       let isEmptyOrder foods drinks = 
          List.isEmpty foods && List.isEmpty drinks 
 

@@ -144,7 +144,7 @@ let handleServeFood food tabId state =
       | AlreadyServedFood iop food ->
          CanNotServeAlreadyServedFood food |> Error
       | ServeFoodCompletesIPOorder iop food ->
-         (OrderServed (iop.PlacedOrder, payment iop.PlacedOrder)) ::  events 
+         events @ [(OrderServed (iop.PlacedOrder, payment iop.PlacedOrder))] //TODO: COLOCAR TESTE PARA ORDEM INVERSA
          |> Ok
 
       | _ -> events |> Ok

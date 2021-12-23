@@ -121,7 +121,7 @@ let stateJObj = function
 | OrderInProgress oip ->
    jobj[
       "sate" .= "OrderInProgress"
-      "data" .= OrderInProgress oip
+      "data" .= orderInProgressJobj oip
    ]
 
 | ServedOrder order ->
@@ -150,7 +150,7 @@ open CommandHandler
 open Suave.RequestErrors
 
 let toErrorJson err = 
-   jobj ["error" .= err]
+   jobj ["error" .= err.Message]
    |> string |> JSON BAD_REQUEST
 
 
@@ -251,6 +251,15 @@ let eventJObj =  function
       "event" .= "FoodPrepared"
       "data" .= jobj [
          "food" .= foodJObj item
+         "tabId" .= tabId
+      ]
+   ]
+
+| FoodServed (food,tabId) ->
+   jobj[
+      "event" .= "FoodServed"
+      "data" .= jobj [
+         "food" .= foodJObj food
          "tabId" .= tabId
       ]
    ]

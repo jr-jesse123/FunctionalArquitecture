@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7a0Z8BesrotEOullLCMgE0OLSOdSBGKkDhh3ZSOkhqj/OXsDhQAlKGoDfHB3TifylTJmt/tPDWv3EVvR+Ui4gQ==",
+  "dgSpecHash": "HDpfBh2ufRyyElxZ8grhQL2iuSKUuu6+h64WfNVbs3FR0JJWyPvE82IiPG9BEXdEkn3CEDfv2t98+nmkr0p0wQ==",
   "success": true,
   "projectFilePath": "D:\\aulas\\fsapplied_1\\CafeApp\\src\\CafeApp.Core\\CafeApp.Core.fsproj",
   "expectedPackageFiles": [
@@ -26,7 +26,7 @@
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
     "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\xunit.runner.console\\2.4.1\\xunit.runner.console.2.4.1.nupkg.sha512",
-    "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.11\\microsoft.netcore.app.host.win-x64.5.0.11.nupkg.sha512"
+    "C:\\Users\\JESSE JUNIOR\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
   ],
   "logs": []
 }
